@@ -1,0 +1,9 @@
+Adding two or more lists:
+1) All are carry overs 9s
+2) unequal lengths
+3) Cannot attach head to tail, due to carry over
+4) prevent Out of Bounds, last print error 
+    Must have new_node pointer trail one behind alternate pointer
+5) last carry over printed 
+6) Prevent None + int addition
+
