@@ -2,6 +2,12 @@ def is_bit_set(x, pos):
     mask = 1 << pos
     return ( x & mask ) != 0
 
+def clear_bit(x, pos):
+    mask = 1 << pos
+    x = x ^ ~mask
+    return x
+
+print("Bit 0: 1011 1100 set?", clear_bit(0b10111100, 0))
 
 print("Bit 0: 1011 1100 set?", is_bit_set(0b10111100, 0))
 print("Bit 1: 1011 1100 set?", is_bit_set(0b10111100, 1))
