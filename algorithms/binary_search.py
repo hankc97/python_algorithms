@@ -19,13 +19,23 @@ def insert(root, val):
     
     return root
 
+def search(root, val):
+    if root == None:
+        return None 
+    if root.val == val:
+        return True
+    if root.val < val:
+        return search(root.right, val)
+    if root.val >= val:
+        return search(root.left, val)
+    
 def printInOrder(root):
     # continue to next node stack if root exists, else recurse back the stack
     if root:
         printInOrder(root.left)
         print(root.val)
         printInOrder(root.right)
-        
+    
 root = Node(8)
 insert(root, 10)
 insert(root, 11)
@@ -33,6 +43,8 @@ insert(root, 4)
 insert(root, 1)
 insert(root, 6)
 
-printInOrder(root)
+# printInOrder(root)
+print(search(root, 1))
+
 
 
