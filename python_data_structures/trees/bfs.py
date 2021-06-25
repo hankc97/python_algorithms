@@ -23,7 +23,6 @@ e.rightChild = g
 
 def bfs(root):
     queue = [root]
-
     while len(queue) != 0:
         popped = queue.pop(0)
         print(popped.key)
