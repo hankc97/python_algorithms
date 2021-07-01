@@ -32,14 +32,9 @@ def BFSearch_Land(grid, num_rows, num_cols, row_idx, col_idx):
         if (popped_row_idx + 1 < num_rows) and grid[popped_row_idx + 1][popped_col_idx] == "1":
                 queue.append(create_matrix_idx(popped_row_idx + 1, popped_col_idx, num_cols))
                 grid[popped_row_idx + 1][popped_col_idx] = "0"
-
-
     
 def create_matrix_idx(row_idx, col_idx, num_cols):
     return (row_idx * num_cols) + col_idx
-
-
-
 
 
 grid = [
